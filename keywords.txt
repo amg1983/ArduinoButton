@@ -1,0 +1,41 @@
+#######################################
+# Syntax Coloring Map For Button
+#######################################
+
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Button KEYWORD1
+
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setup					KEYWORD2
+getStatus				KEYWORD2
+getPin					KEYWORD2
+
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+Button					KEYWORD2
+
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+CLICK					LITERAL1
+CLICK_CONFIRMED			LITERAL1
+PRESSED					LITERAL1
+UP						LITERAL1
+RELEASED				LITERAL1
+SINGLE_CLICK			LITERAL1
+LONG_CLICK				LITERAL1
+LONG_PRESSED			LITERAL1
+DOUBLE_CLICK			LITERAL1
+DOUBLE_PRESSED			LITERAL1
