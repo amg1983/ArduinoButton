@@ -29,14 +29,17 @@ void loop() {
       Serial.write("DOUBLE_CLICK\n");
       break;
   }
-```
+  ```
 
-## Status Values
+## Diagram
+
+![](button_diagram_w.png?raw=true)
 ### Single time events
-#### CLICK
-Single click
-#### UP
-
-#### LONG_CLICK
-#### DOUBLE_CLICK
-#### CLICK_CONFIRMED
+```
+CLICK, DOUBLE_CLICK, LONG_CLICK and CLICK_CONFIRMED
+```
+You shouldn't use CLICK if you want to detect double clicks or long clicks. In that case, use CLICK_CONFIRMED
+### Single time events
+```
+PRESSED, RELEASED, LONG_PRESSED and DOUBLE_PRESSED
+```
