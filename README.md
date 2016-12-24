@@ -35,11 +35,21 @@ void loop() {
 
 ![](button_diagram_w.png?raw=true)
 ### Single time events
-```
-CLICK, DOUBLE_CLICK, LONG_CLICK and CLICK_CONFIRMED
-```
-You shouldn't use CLICK if you want to detect double clicks or long clicks. In that case, use CLICK_CONFIRMED
+###### 1. CLICK
+Triggered when the button is clicked.
+You shouldn't use CLICK if you want to detect also double or long clicks. In that case you should wait for CLICK_CONFIRMED
+###### 2. DOUBLE_CLICK
+The button was double clicked. To trigger this event, the maximum interval between clicks has to be less than 500ms.
+###### 3. LONG_CLICK
+The button is pressed for 500ms
+###### 4. CLICK_CONFIRMED
+Triggered if 500ms after a CLICK event no DOUBLE_CLICK or LONG_CLICK events are detected
 ### Single time events
-```
-PRESSED, RELEASED, LONG_PRESSED and DOUBLE_PRESSED
-```
+###### 1. RELEASED
+The button is not pressed.
+###### 2. PRESSED
+After the CLICK status, while the button is still pressed.
+###### 3. DOUBLE_PRESSED
+After the DOUBLE_CLICK event, while the button is still pressed.
+###### 4. LONG_PRESSED
+After the LONG_CLICK event, while the button is still pressed.
