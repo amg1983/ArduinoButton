@@ -16,9 +16,9 @@ void setup() {
 
 void loop() {
   // Read the status of the button ONLY one time inside the loop() method
-  int result = buttonA.getStatus();
+  int status = buttonA.getStatus();
 
-  switch (result) {
+  switch (status) {
     case Button::CLICK_CONFIRMED:
       Serial.write("CLICK_CONFIRMED\n");
       break;
@@ -28,23 +28,25 @@ void loop() {
     case Button::DOUBLE_CLICK:
       Serial.write("DOUBLE_CLICK\n");
       break;
+    //...
+    //Other statuses: CLICK, RELEASED, PRESSED, DOUBLE_PRESSED, LONG_PRESSED
   }
   ```
 
 ## Diagram
 
 ![](button_diagram_w.png?raw=true)
-### Single time events
+## Single time events
 ###### 1. CLICK
 Triggered when the button is clicked.
 You shouldn't use CLICK if you want to detect also double or long clicks. In that case you should wait for CLICK_CONFIRMED
 ###### 2. DOUBLE_CLICK
-The button was double clicked. To trigger this event, the maximum interval between clicks has to be less than 500ms.
+The button was double clicked. To trigger this event, the maximum interval between clicks has to be less than 500 ms.
 ###### 3. LONG_CLICK
-The button is pressed for 500ms
+The button is pressed for 500 ms.
 ###### 4. CLICK_CONFIRMED
-Triggered if 500ms after a CLICK event no DOUBLE_CLICK or LONG_CLICK events are detected
-### Single time events
+Triggered if 500 ms after a CLICK event no DOUBLE_CLICK or LONG_CLICK events are detected.
+## Single time events
 ###### 1. RELEASED
 The button is not pressed.
 ###### 2. PRESSED
